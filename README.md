@@ -6,7 +6,7 @@ This project implements an efficient **image classification system** that distin
 
 ---
 
-## 🔍 Overview
+##   Overview
 
 - Extracts deep image features using pretrained **MobileNetV2** (transfer learning).
 - Trains a **Linear SVM** on these features.
@@ -15,7 +15,7 @@ This project implements an efficient **image classification system** that distin
 
 ---
 
-## 🧠 Technologies Used
+##  Technologies Used
 
 - Python 3.10+
 - TensorFlow / Keras
@@ -26,5 +26,43 @@ This project implements an efficient **image classification system** that distin
 
 ---
 
-## 🗂️ Project Structure
+##  Project Structure
+
+Image-Classifier/
+├── svm_mobilenet_model.pkl # Trained SVM model (joblib format)
+├── svm_final_model.pkl # Trained SVM model (pickle format, for better compatibility)
+├── training_images/ # Folder containing training images (cats and dogs)
+├── predict.py # Python script to predict a single image
+├── SVM_train.py # Training script
+└── README.md # Project description
+
+
+---
+
+##  Installation
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/yourusername/cat-dog-svm-classifier.git
+   cd cat-dog-svm-classifier
+2.Install required dependencies:
+pip install tensorflow scikit-learn numpy matplotlib joblib
+3. Make sure your training images are placed in:
+training_images/train/
+    cat.1.jpg
+    dog.1.jpg
+    ...
+ Training
+To train the SVM model:
+
+python SVM_train.py
+This will:
+
+Load images
+
+Preprocess and extract features via MobileNetV2
+
+Train an SVM classifier
+
+Save the model as .pkl
 
